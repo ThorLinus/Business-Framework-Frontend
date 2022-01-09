@@ -16,6 +16,9 @@ import { ProjectManagementComponent } from 'src/app/modules/project-management/p
 import { RightsAdministrationComponent } from 'src/app/modules/rights-administration/rights-administration.component';
 import { TicketManagementComponent } from 'src/app/modules/ticket-management/ticket-management.component';
 import { UserComponent } from 'src/app/modules/user/user.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatCardModule } from '@angular/material/card'
+import { DashboardService } from 'src/app/modules/data/dashboard.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,12 @@ import { UserComponent } from 'src/app/modules/user/user.component';
     SharedModule,
     MatSidenavModule,
     MatDividerModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FlexLayoutModule,
+    MatCardModule
+  ],
+  providers: [
+    DashboardService
   ]
 })
 export class DefaultModule { }

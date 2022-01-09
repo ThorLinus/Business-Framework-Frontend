@@ -1,4 +1,8 @@
-# BusinessFramework
+# Business Framework Middelware : Tigris
+
+This project evolved due to an assignment at a university.
+
+## Used configuration
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 

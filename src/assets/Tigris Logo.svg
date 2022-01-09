@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="267" height="67.667" viewBox="0 0 267 67.667">
+  <g id="Gruppe_2" data-name="Gruppe 2" transform="translate(-5618 11.333)">
+    <text id="Tigris" transform="translate(5708 42)" fill="#03045e" font-size="55" font-family="Arial-BoldMT, Arial" font-weight="700" letter-spacing="0.1em"><tspan x="0" y="0">Tigris</tspan></text>
+    <g id="network-3" transform="translate(5616 -13.333)">
+      <path id="Pfad_13" data-name="Pfad 13" d="M45.356,41.333H22V22H45.356ZM27.839,36.5H39.517V26.833H27.839Z" transform="translate(38.39 28.333)" fill="#0077b6"/>
+      <path id="Pfad_14" data-name="Pfad 14" d="M54.551,44H19.517C9.843,44,2,37.508,2,29.5S9.843,15,19.517,15h5.839v4.833H19.517c-6.45,0-11.678,4.328-11.678,9.667s5.228,9.667,11.678,9.667H54.551Z" transform="translate(0 18.417)" fill="#03045e"/>
+      <path id="Pfad_15" data-name="Pfad 15" d="M35.356,31.333H12V12H35.356ZM17.839,26.5H29.517V16.833H17.839Z" transform="translate(19.195 14.167)" fill="#03045e"/>
+      <path id="Pfad_16" data-name="Pfad 16" d="M47.034,34H41.2V29.167h5.839c6.45,0,11.678-4.328,11.678-9.667S53.484,9.833,47.034,9.833H12V5H47.034c9.674,0,17.517,6.492,17.517,14.5S56.709,34,47.034,34Z" transform="translate(19.195 4.25)" fill="#03045e"/>
+      <path id="Pfad_17" data-name="Pfad 17" d="M25.356,21.333H2V2H25.356ZM7.839,16.5H19.517V6.833H7.839Z" transform="translate(0 0)" fill="#0077b6"/>
+    </g>
+  </g>
+</svg>
