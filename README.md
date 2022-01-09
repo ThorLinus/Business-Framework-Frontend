@@ -5,8 +5,11 @@ This project evolved due to an assignment at a university.
 Before depolying to the development server the following commands need to be executed:
 
 > ng add @angular/material
+
 > npm i highcharts-angular --save
+
 > npm i highcharts --save
+
 > npm i @angular/flex-layout @angular/cdk
 
 Highcharts is used to plot serveral charts.
