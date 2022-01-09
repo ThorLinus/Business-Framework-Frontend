@@ -19,6 +19,8 @@ import { UserComponent } from 'src/app/modules/user/user.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card'
 import { DashboardService } from 'src/app/modules/data/dashboard.service';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table'
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { DashboardService } from 'src/app/modules/data/dashboard.service';
     MatDividerModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    MatCardModule
+    MatCardModule,
+    MatPaginatorModule,
+    MatTableModule
   ],
   providers: [
     DashboardService
