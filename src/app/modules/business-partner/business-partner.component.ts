@@ -14,7 +14,7 @@ export class BusinessPartnerComponent implements OnInit {
   areaDataBP: any = [];
   totalBPeachYear: any = [];
 
-  displayedColumns: string[] = ['companyName', 'industry', 'goods', 'dateStart', 'dateEnd'];
+  displayedColumns: string[] = ['position', 'companyName', 'industry', 'goods', 'dateStart', 'dateEnd'];
 
   @ViewChild(MatPaginator, { static: true })
   paginator!: MatPaginator;
@@ -26,12 +26,21 @@ export class BusinessPartnerComponent implements OnInit {
   constructor(private businessPartnerService : BusinessPartnerService) { }
 
   ngOnInit(): void {
+    this.tableDataBP.paginator = this.paginator;
     this.tableDataBP = this.businessPartnerService.tableDataBP();
     this.areaDataBP = this.businessPartnerService.areaDataBP();
     this.totalBPeachYear = this.businessPartnerService.totalBPeachYear();
   }
 }
 
+export interface PeriodicElement {
+  position: number;
+  companyName: string;
+  industry: string;
+  goods: string;
+  dateStart: string;
+  dateEnd: string
+}
 
 
 
