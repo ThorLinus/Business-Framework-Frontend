@@ -10,9 +10,9 @@ import { MatPaginator } from '@angular/material/paginator';
 })
 export class DashboardComponent implements OnInit {
 
-  areaData = [];
-  cardData = [];
-  pieData = [];
+  areaData: any = [];
+  cardData: any = [];
+  pieData: any = [];
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
@@ -27,9 +27,9 @@ export class DashboardComponent implements OnInit {
   constructor(private dashboardService: DashboardService) { }
 
   ngOnInit(): void {
-    // this.areaData = this.dashboardService.areaData();
-    // this.cardData = this.dashboardService.cardData();
-    // this.pieData = this.dashboardService.pieData();
+    this.areaData = this.dashboardService.areaData();
+    this.cardData = this.dashboardService.cardData();
+    this.pieData = this.dashboardService.pieData();
     this.dataSource.paginator = this.paginator;
   }
 }

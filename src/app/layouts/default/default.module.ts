@@ -21,6 +21,7 @@ import { MatCardModule } from '@angular/material/card'
 import { DashboardService } from 'src/app/modules/data/dashboard.service';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table'
+import { BusinessPartnerService } from 'src/app/modules/data/business-partner.service';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { MatTableModule } from '@angular/material/table'
     MatTableModule
   ],
   providers: [
-    DashboardService
+    DashboardService,
+    BusinessPartnerService
   ]
 })
 export class DefaultModule { }

@@ -46,25 +46,7 @@ export class PieComponent implements OnInit {
       credits: {
         enabled: false
       },
-      series: [{
-        name: 'Brands',
-        colorByPoint: true,
-        data: [{
-          name: 'Aktiv',
-          y: 20,
-          sliced: true,
-          selected: true
-        }, {
-          name: 'Nicht Aktiv',
-          y: 10
-        }, {
-          name: 'In Wartung',
-          y: 2
-        }, {
-          name: 'Defekt',
-          y: 2
-        }]
-    }]
+      series: this.data
     };
 
     HC_exporting(Highcharts);
