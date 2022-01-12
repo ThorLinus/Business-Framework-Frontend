@@ -57,6 +57,8 @@ export class BusinessPartnerService {
       {position: 20 ,companyName: 'LVMH'                  ,industry: 'Lusxusgüter'    ,goods: 'Ca'  ,dateStart: '2014-01-01'  ,dateEnd: '2030-12-31'},
     ];
   }
+  
+  // company name - contract person - timezone - headquarter - creation date
 
   totalCustomerYear() {
     return [{

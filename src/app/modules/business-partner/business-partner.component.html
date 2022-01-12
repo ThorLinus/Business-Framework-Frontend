@@ -50,10 +50,10 @@
     <div fxFlex="40">
         <app-widget-bar 
             [data]="totalBPeachYear"
-            title="Gesamtzahl Geschäftspartner"
+            title="Number business partner"
             subtitle="Source : CRM"
             [xAxis]="[2018, 2019, 2020, 2021]"
-            yAxis="Anzahl">
+            yAxis="Count">
         </app-widget-bar>
     </div>
 </div>
@@ -68,8 +68,8 @@
     <div fxFlex="40">
         <app-widget-area
             [data]="totalCustomerYear"
-            title="Kundenentwicklung"
-            yAxis="Anzahl"
+            title="Customer development"
+            yAxis="Count"
             xAxis="Range: 2017 to 2021"
             [pointStart]="2017">
         </app-widget-area>
@@ -77,12 +77,12 @@
 
     <div fxFlex="60">
         <app-widget-area 
-            [data]="areaDataBP" 
-            title="Mitarbeiterentwicklung pro Sektor" 
-            subtitle="Jahr 2014 - heute" 
-            yAxis="Anzahl Mitarbeiter" 
-            xAxis="Range: 2014 to 2021"
-            [pointStart]="2014">
+        [data]="areaDataBP" 
+        title="Employee development per sector" 
+        subtitle="Year 2015 - today" 
+        yAxis="Number of employees" 
+        xAxis="Range: 2015 to 2021"
+        [pointStart]="2015">
         </app-widget-area>  
     </div>
 </div>

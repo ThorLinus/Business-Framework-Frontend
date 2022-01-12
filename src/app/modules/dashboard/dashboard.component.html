@@ -1,11 +1,11 @@
 <div>
     <app-widget-area 
         [data]="areaData" 
-        title="Mitarbeiterentwicklung pro Sektor" 
-        subtitle="Jahr 2014 - heute" 
-        yAxis="Anzahl Mitarbeiter" 
-        xAxis="Range: 2014 to 2021"
-        [pointStart]="2014">
+        title="Employee development per sector" 
+        subtitle="Year 2015 - today" 
+        yAxis="Number of employees" 
+        xAxis="Range: 2015 to 2021"
+        [pointStart]="2015">
     </app-widget-area>
 </div>
 
@@ -17,16 +17,16 @@
 
 <div fxLayout="row" fxLayoutAlign ="space-between center" fxLayoutGap="20px" class="stats-cards">
     <mat-card fxFlex="25">
-        <app-widget-card label="New Users" total="12k" percentage="50" [data]="cardData"></app-widget-card>
+        <app-widget-card label="New Customer" total="1k" percentage="20" [data]="cardData"></app-widget-card>
     </mat-card>
     <mat-card fxFlex="25">
-        <app-widget-card label="Users retention" total="10k" percentage="40" [data]="cardData"></app-widget-card>
+        <app-widget-card label="Avg. Ticket-time" total="3D" percentage="40" [data]="cardData"></app-widget-card>
     </mat-card>
     <mat-card fxFlex="25">
-        <app-widget-card label="Users engagement" total="8k" percentage="30" [data]="cardData"></app-widget-card>
+        <app-widget-card label="New Tickets" total="10" percentage="30" [data]="cardData"></app-widget-card>
     </mat-card>
     <mat-card fxFlex="25">
-        <app-widget-card label="Referral" total="6k" percentage="20" [data]="cardData"></app-widget-card>
+        <app-widget-card label="Invoice" total="124" percentage="20" [data]="cardData"></app-widget-card>
     </mat-card>
 </div>
 
@@ -43,26 +43,38 @@
 
                 <!-- Position Column -->
                 <ng-container matColumnDef="position">
-                    <th mat-header-cell *matHeaderCellDef> No. </th>
+                    <th mat-header-cell *matHeaderCellDef> Position </th>
                     <td mat-cell *matCellDef="let element"> {{element.position}} </td>
                 </ng-container>
 
-                <!-- Name Column -->
-                <ng-container matColumnDef="name">
-                    <th mat-header-cell *matHeaderCellDef> Name </th>
-                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                <!-- Company Column -->
+                <ng-container matColumnDef="companyName">
+                    <th mat-header-cell *matHeaderCellDef> Unternehmensname </th>
+                    <td mat-cell *matCellDef="let element"> {{element.companyName}} </td>
                 </ng-container>
 
-                <!-- Weight Column -->
-                <ng-container matColumnDef="weight">
-                    <th mat-header-cell *matHeaderCellDef> Weight </th>
-                    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                <!-- Industry Column -->
+                <ng-container matColumnDef="industry">
+                    <th mat-header-cell *matHeaderCellDef> Branche </th>
+                    <td mat-cell *matCellDef="let element"> {{element.industry}} </td>
                 </ng-container>
 
-                <!-- Symbol Column -->
-                <ng-container matColumnDef="symbol">
-                    <th mat-header-cell *matHeaderCellDef> Symbol </th>
-                    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                <!-- Goods Column -->
+                <ng-container matColumnDef="goods">
+                    <th mat-header-cell *matHeaderCellDef> Ware </th>
+                    <td mat-cell *matCellDef="let element"> {{element.goods}} </td>
+                </ng-container>
+
+                <!-- Contract-date-start Column -->
+                <ng-container matColumnDef="dateStart">
+                    <th mat-header-cell *matHeaderCellDef> Vertragsbeginn </th>
+                    <td mat-cell *matCellDef="let element"> {{element.dateStart}} </td>
+                </ng-container>
+
+                <!-- Contract-date-end Column -->
+                <ng-container matColumnDef="dateEnd">
+                    <th mat-header-cell *matHeaderCellDef> Vertragsende </th>
+                    <td mat-cell *matCellDef="let element"> {{element.dateEnd}} </td>
                 </ng-container>
 
                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -74,6 +86,6 @@
 
     </div>
     <div fxFlex="40">
-        <app-widget-pie [data]="pieData"></app-widget-pie>
+        <app-widget-pie [data]="pieData" title="Maschines status - department: manufacturing"></app-widget-pie>
     </div>
 </div>

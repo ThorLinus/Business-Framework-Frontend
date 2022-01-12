@@ -13,6 +13,7 @@ export class PieComponent implements OnInit {
   chartOptions = {};
 
   @Input() data: any = [];
+  @Input() title: string = "";
 
   constructor() { }
 
@@ -25,7 +26,7 @@ export class PieComponent implements OnInit {
         type: 'pie'
       },
       title: {
-        text: 'Maschinen Status - Abteilung Entwicklung'
+        text: this.title
       },
       tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
