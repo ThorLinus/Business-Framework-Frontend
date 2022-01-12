@@ -1,0 +1,15 @@
+:host{
+    background-color: #023E8A;
+
+    .login-main{
+        margin-top: 10%;
+    }
+    
+    mat-card{
+        min-width: 40%;
+    }
+
+    a:hover, a:active{
+        color: #023E8A;
+    }
+}
