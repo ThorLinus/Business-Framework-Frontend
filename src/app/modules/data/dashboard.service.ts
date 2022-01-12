@@ -35,18 +35,18 @@ export class DashboardService {
       name: 'Brands',
       colorByPoint: true,
       data: [{
-        name: 'Aktiv',
+        name: 'active',
         y: 20,
         sliced: true,
         selected: true
       }, {
-        name: 'Nicht Aktiv',
+        name: 'not active',
         y: 10
       }, {
-        name: 'In Wartung',
+        name: 'in maintenance',
         y: 2
       }, {
-        name: 'Defekt',
+        name: 'defect',
         y: 2
       }]
     }]

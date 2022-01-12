@@ -11,6 +11,11 @@ export class AreaComponent implements OnInit {
 
   chartOptions = {};
   @Input() data: any = [];
+  @Input() title: string = "";
+  @Input() subtitle: string = "";
+  @Input() yAxis: string = "";
+  @Input() xAxis: string = "";
+  @Input() pointStart: any = [];
 
   Highcharts = Highcharts;
 
@@ -21,22 +26,22 @@ export class AreaComponent implements OnInit {
     {
 
       title: {
-          text: 'Mitarbeiterenwticklung pro Sektor'
+          text: this.title
       },
   
       subtitle: {
-          text: 'Jahr 2014 - heute'
+          text: this.subtitle
       },
   
       yAxis: {
           title: {
-              text: 'Anzahl Mitarbeiter'
+              text: this.yAxis
           }
       },
   
       xAxis: {
           accessibility: {
-              rangeDescription: 'Range: 2014 to 2021'
+              rangeDescription: this.xAxis
           }
       },
   
@@ -51,7 +56,7 @@ export class AreaComponent implements OnInit {
               label: {
                   connectorAllowed: false
               },
-              pointStart: 2014
+              pointStart: this.pointStart
           }
       },
       
