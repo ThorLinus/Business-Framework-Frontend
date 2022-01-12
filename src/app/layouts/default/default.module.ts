@@ -25,6 +25,7 @@ import { BusinessPartnerService } from 'src/app/modules/data/business-partner.se
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input'
 import { MatButtonModule } from '@angular/material/button';
+import { LoginService } from 'src/app/modules/data/login.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,6 @@ import { MatButtonModule } from '@angular/material/button';
     BusinessPartnerComponent,
     DeliveriesComponent,
     InvoiceComponent,
-    LoginComponent,
     ProjectManagementComponent,
     RightsAdministrationComponent,
     TicketManagementComponent,
@@ -58,7 +58,8 @@ import { MatButtonModule } from '@angular/material/button';
   ],
   providers: [
     DashboardService,
-    BusinessPartnerService
+    BusinessPartnerService,
+    LoginService
   ]
 })
 export class DefaultModule { }

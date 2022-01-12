@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { BusinessPartnerService } from '../data/business-partner.service';
+import { BusinessPartner } from '../data/interface/business-partner';
 
 @Component({
   selector: 'app-business-partner',
@@ -34,15 +35,6 @@ export class BusinessPartnerComponent implements OnInit {
     this.totalCustomerYear = this.businessPartnerService.totalCustomerYear();
     this.dataSourceBP.paginator = this.paginator;
   }
-}
-
-export interface BusinessPartner {
-  companyName: string;
-  position: number;
-  industry: string;
-  goods: string;
-  dateStart: string;
-  dateEnd: string
 }
 
 const BP_DATA: BusinessPartner[] = [

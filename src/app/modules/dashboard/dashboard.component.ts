@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { DashboardService } from '../data/dashboard.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
+import { BusinessPartner } from '../data/interface/business-partner';
 
 @Component({
   selector: 'app-dashboard',
@@ -32,15 +33,6 @@ export class DashboardComponent implements OnInit {
     this.pieData = this.dashboardService.pieData();
     this.dataSource.paginator = this.paginator;
   }
-}
-
-export interface BusinessPartner {
-  companyName: string;
-  position: number;
-  industry: string;
-  goods: string;
-  dateStart: string;
-  dateEnd: string
 }
 
 const BP_DATA: BusinessPartner[] = [
