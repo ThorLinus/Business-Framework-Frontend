@@ -30,7 +30,6 @@ export class BusinessPartnerService {
     return [{
       name: 'BP',
       data: [19, 24, 22, 26]
-
     }]
   }
 
@@ -57,5 +56,12 @@ export class BusinessPartnerService {
       {position: 19 ,companyName: 'UnitedHealth'          ,industry: 'Versicherungen' ,goods: 'K'   ,dateStart: '2014-01-01'  ,dateEnd: '2030-12-31'},
       {position: 20 ,companyName: 'LVMH'                  ,industry: 'Lusxusgüter'    ,goods: 'Ca'  ,dateStart: '2014-01-01'  ,dateEnd: '2030-12-31'},
     ];
+  }
+
+  totalCustomerYear() {
+    return [{
+      name: 'Customer',
+      data: [150, 205, 160, 200, 240]
+    }]
   }
 }

@@ -1,5 +1,12 @@
 <div>
-    <app-widget-area [data]="areaData"></app-widget-area>
+    <app-widget-area 
+        [data]="areaData" 
+        title="Mitarbeiterentwicklung pro Sektor" 
+        subtitle="Jahr 2014 - heute" 
+        yAxis="Anzahl Mitarbeiter" 
+        xAxis="Range: 2014 to 2021"
+        [pointStart]="2014">
+    </app-widget-area>
 </div>
 
 <br>
