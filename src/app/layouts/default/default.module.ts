@@ -22,6 +22,13 @@ import { DashboardService } from 'src/app/modules/data/dashboard.service';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table'
 import { BusinessPartnerService } from 'src/app/modules/data/business-partner.service';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input'
+import { MatButtonModule } from '@angular/material/button';
+import { LoginService } from 'src/app/modules/data/login.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ServiceService } from 'src/app/modules/data/service.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -47,11 +54,18 @@ import { BusinessPartnerService } from 'src/app/modules/data/business-partner.se
     FlexLayoutModule,
     MatCardModule,
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     DashboardService,
-    BusinessPartnerService
+    BusinessPartnerService,
+    LoginService,
+    ServiceService
   ]
 })
 export class DefaultModule { }

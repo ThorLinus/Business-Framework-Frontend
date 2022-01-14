@@ -6,16 +6,18 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { DeliveriesComponent } from './modules/deliveries/deliveries.component';
 import { FinanceComponent } from './modules/finance/finance.component';
 import { InvoiceComponent } from './modules/invoice/invoice.component';
+import { LoginComponent } from './modules/login/login.component';
 import { ProjectManagementComponent } from './modules/project-management/project-management.component';
 import { RightsAdministrationComponent } from './modules/rights-administration/rights-administration.component';
 import { TicketManagementComponent } from './modules/ticket-management/ticket-management.component';
 import { UserComponent } from './modules/user/user.component';
 
+
 const routes: Routes = [{
-  path: '',
+  path: 'home',
   component: DefaultComponent,
   children: [{
-    path: '',
+    path: 'home',
     component: DashboardComponent
   },{
     path: 'finance',
@@ -42,6 +44,13 @@ const routes: Routes = [{
     path: 'rights-administration',
     component: RightsAdministrationComponent
   }]
+}, {
+  path: "", 
+  pathMatch: "full", 
+  redirectTo: "login"
+}, {
+  path: "login",
+  component: LoginComponent
 }];
 
 @NgModule({
