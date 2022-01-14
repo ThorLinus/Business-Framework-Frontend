@@ -4,6 +4,7 @@ import { Auth } from '../data/interface/auth';
 import { Login } from '../data/interface/login';
 import { ServiceService } from '../data/service.service';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,6 +14,20 @@ export class LoginComponent implements OnInit {
 
   public login$: Login;
   public auth$: Auth;
+
+  constructor(public loginService: LoginService, private router: Router){
+
+    this.login$={
+      email: "",
+      password: ""
+    }
+
+    this.auth$={
+      userId: "",
+      isAdmin: false,
+      token: ""
+    }
+   }
 
   constructor(private _service: ServiceService, private _router: Router){ 
     this.login$={

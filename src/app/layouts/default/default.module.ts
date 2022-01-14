@@ -30,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ServiceService } from 'src/app/modules/data/service.service';
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     DefaultComponent,
@@ -38,11 +39,11 @@ import { FormsModule } from '@angular/forms';
     BusinessPartnerComponent,
     DeliveriesComponent,
     InvoiceComponent,
-    LoginComponent,
     ProjectManagementComponent,
     RightsAdministrationComponent,
     TicketManagementComponent,
-    UserComponent
+    UserComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
@@ -60,12 +61,14 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     HttpClientModule,
     FormsModule
+
   ],
   providers: [
     DashboardService,
     BusinessPartnerService,
     LoginService,
     ServiceService
+
   ]
 })
 export class DefaultModule { }

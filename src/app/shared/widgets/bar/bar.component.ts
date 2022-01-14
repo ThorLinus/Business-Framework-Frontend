@@ -16,6 +16,7 @@ export class BarComponent implements OnInit {
   @Input() xAxis: any = [];
   @Input() yAxis: string = "";
 
+
   Highcharts = Highcharts;
 
   constructor() { }
