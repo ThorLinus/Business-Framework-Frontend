@@ -12,11 +12,12 @@ import { RightsAdministrationComponent } from './modules/rights-administration/r
 import { TicketManagementComponent } from './modules/ticket-management/ticket-management.component';
 import { UserComponent } from './modules/user/user.component';
 
+
 const routes: Routes = [{
-  path: '',
+  path: 'home',
   component: DefaultComponent,
   children: [{
-    path: '',
+    path: 'home',
     component: DashboardComponent
   },{
     path: 'finance',
@@ -44,7 +45,11 @@ const routes: Routes = [{
     component: RightsAdministrationComponent
   }]
 }, {
-  path: 'login',
+  path: "", 
+  pathMatch: "full", 
+  redirectTo: "login"
+}, {
+  path: "login",
   component: LoginComponent
 }];
 

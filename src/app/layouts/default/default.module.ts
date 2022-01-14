@@ -26,6 +26,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input'
 import { MatButtonModule } from '@angular/material/button';
 import { LoginService } from 'src/app/modules/data/login.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ServiceService } from 'src/app/modules/data/service.service';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -54,12 +58,17 @@ import { LoginService } from 'src/app/modules/data/login.service';
     MatTableModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule,
+    FormsModule
+
   ],
   providers: [
     DashboardService,
     BusinessPartnerService,
-    LoginService
+    LoginService,
+    ServiceService
+
   ]
 })
 export class DefaultModule { }

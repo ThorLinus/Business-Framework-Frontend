@@ -1,5 +1,5 @@
 export interface Auth{
-    userId: string;
-    isAdmin: boolean;
+    userid: string;
     token: string;
+    admin: boolean;
 }

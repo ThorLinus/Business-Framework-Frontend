@@ -6,6 +6,7 @@ import { catchError, Observable, retry, throwError } from 'rxjs';
 import { Auth } from './interface/auth';
 import { Login } from './interface/login';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -40,5 +41,4 @@ export class LoginService {
   //   window.alert(errorMessage)
   //   return new Error(errorMessage);
   // }
-
 }
