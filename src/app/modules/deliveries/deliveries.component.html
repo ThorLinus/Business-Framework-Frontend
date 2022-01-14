@@ -1,1 +1,49 @@
-<p>deliveries works!</p>
+<div fxLayout="row" fxLayoutAlign ="space-between center" >
+    <mat-card fxFlex="100">
+        <mat-card-title>Average duration</mat-card-title>
+        <mat-card-content>
+            <mat-card fxFlex="25">
+                <mat-card-title>Order placement</mat-card-title>
+                <mat-card-content>0,6 Tage</mat-card-content>
+            </mat-card>
+            <mat-card fxFlex="25">
+                <mat-card-title>Delivery confirmation</mat-card-title>
+                <mat-card-content>2,9 Tage</mat-card-content>
+            </mat-card>
+            <mat-card fxFlex="25">
+                <mat-card-title>Delivery time</mat-card-title>
+                <mat-card-content>2,4 Tage</mat-card-content>
+            </mat-card>
+            <mat-card fxFlex="25">
+                <mat-card-title>Invoicing</mat-card-title>
+                <mat-card-content>2,4 Tage</mat-card-content>
+            </mat-card>
+        </mat-card-content>
+
+    </mat-card>
+</div>
+
+<br>
+
+<mat-divider></mat-divider>
+
+<br>
+
+<div >
+    <app-widget-area
+        [data]="areaDataDeliveries" 
+        title="Delivery distribution" 
+        yAxis="Number of distribution" 
+        xAxis="Range: Januar to December"
+        [pointStart]="1" >
+    </app-widget-area>
+</div>
+
+<br> 
+<mat-divider></mat-divider>
+
+<br>
+
+<div fxFlex ="40">
+    <app-widget-pie [data] ="pieDataDeliveries" title="Supplier utilization"></app-widget-pie>
+</div>

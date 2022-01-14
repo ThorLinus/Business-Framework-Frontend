@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DeliveriesService } from '../data/deliveries.service';
 
 @Component({
   selector: 'app-deliveries',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeliveriesComponent implements OnInit {
 
-  constructor() { }
+  areaDataDeliveries: any = [];
+  pieDataDeliveries: any=[];
+
+  constructor(private deliveriesService: DeliveriesService) { }
 
   ngOnInit(): void {
+    this.areaDataDeliveries= this.deliveriesService.areaDataDeliveries();
+    this.pieDataDeliveries= this.deliveriesService.pieDataDeliveries();
   }
 
 }
