@@ -1,7 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { CATCH_ERROR_VAR } from '@angular/compiler/src/output/output_ast';
 import { Injectable } from '@angular/core';
-import { catchError, retry } from 'rxjs';
+import { retry } from 'rxjs';
 import { Auth } from './interface/auth';
 import { Login } from './interface/login';
 
@@ -10,8 +9,10 @@ import { Login } from './interface/login';
 })
 export class ServiceService {
 
-  private serverUrl: string = "localhost:8080";
+  private loginURL: string = 'http://localhost:8080/api/login';
   public authentification: Auth | undefined;
+  private email: string = '';
+  private password: string = '';
 
   constructor(private _http: HttpClient) { }
 
@@ -23,22 +24,19 @@ export class ServiceService {
       timeout: 900000,
     }
 
+    this.email = login.email;
+    this.password = login.password;
+
     let body = JSON.stringify(login)
-    return this._http.post<Auth>('localhost:8080/api/login', body, httpOptions).pipe(
-      retry(1),
-      catchError(this.handleError.arguments));
+    return this._http.post<Auth>(this.loginURL, body, httpOptions).pipe(
+      retry(1))
+  }
+  
+  public get userEmail() : string {
+    return this.email;
   }
 
-  handleError(error: any){
-    let errorMessage = '';
-    if(error.error instanceof ErrorEvent) {
-      // Get client-side error
-      errorMessage = error.error.message;
-    } else {
-      // Get server-side error
-      errorMessage = `Error Code: ${error.status}\n Message: ${error.message}`;
-    }
-    window.alert(errorMessage);
-    return new Error(errorMessage);
- }
+  public get userPassword() : string {
+    return this.password;
+  }
 }
