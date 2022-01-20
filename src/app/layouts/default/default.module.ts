@@ -29,6 +29,7 @@ import { LoginService } from 'src/app/modules/data/login.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ServiceService } from 'src/app/modules/data/service.service';
 import { FormsModule } from '@angular/forms';
+import { TicketsService } from 'src/app/modules/data/tickets.service';
 
 
 @NgModule({
@@ -67,8 +68,8 @@ import { FormsModule } from '@angular/forms';
     DashboardService,
     BusinessPartnerService,
     LoginService,
-    ServiceService
-
+    ServiceService,
+    TicketsService
   ]
 })
 export class DefaultModule { }
