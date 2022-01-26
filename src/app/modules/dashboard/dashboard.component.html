@@ -20,7 +20,7 @@
         <app-widget-card label="New Customer" total="1k" percentage="20" [data]="cardData"></app-widget-card>
     </mat-card>
     <mat-card fxFlex="25">
-        <app-widget-card label="Avg. Ticket-time" total="3D" percentage="40" [data]="cardData"></app-widget-card>
+        <app-widget-card label="Avg. Ticket-time" [total]="ticketTime" [percentage]="targetAchievement" [data]="ticketCourse"></app-widget-card>
     </mat-card>
     <mat-card fxFlex="25">
         <app-widget-card label="New Tickets" total="10" percentage="30" [data]="cardData"></app-widget-card>

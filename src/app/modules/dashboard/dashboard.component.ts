@@ -3,6 +3,9 @@ import { DashboardService } from '../data/dashboard.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { BusinessPartner } from '../data/interface/business-partner';
+import { TicketsService } from '../data/tickets.service';
+import { Tickets } from '../data/interface/tickets';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,6 +17,9 @@ export class DashboardComponent implements OnInit {
   areaData: any = [];
   cardData: any = [];
   pieData: any = [];
+  ticketTime: any = [];
+  targetAchievement: any = [];
+  ticketCourse: any = [];
 
   displayedColumns: string[] = ['companyName', 'industry', 'goods', 'dateStart', 'dateEnd'];
   dataSource = new MatTableDataSource<BusinessPartner>(BP_DATA);
@@ -25,12 +31,15 @@ export class DashboardComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
   }  
 
-  constructor(private dashboardService: DashboardService) { }
+  constructor(private dashboardService: DashboardService, private ticketService: TicketsService) { }
 
   ngOnInit(): void {
     this.areaData = this.dashboardService.areaData();
     this.cardData = this.dashboardService.cardData();
     this.pieData = this.dashboardService.pieData();
+    this.ticketTime = this.ticketService.getTicketTime();
+    this.targetAchievement = this.ticketService.getTargetAchievement();
+    this.ticketCourse = this.ticketService.getTicketCourse
     this.dataSource.paginator = this.paginator;
   }
 }

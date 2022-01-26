@@ -16,11 +16,11 @@ export class TicketManagementComponent implements OnInit {
     this.tickets$={
       ticketTime: 0,
       targetAchievement: 0,
-      ticketCourse: new Map<string, number>()
+      ticketCourse: []
     }
   }
 
   ngOnInit(): void {
-    this.tickets$ = this._ticketsService.ticketsAvg();
+    //this.tickets$ = this._ticketsService.getTicketsAvg();
   }
 }
