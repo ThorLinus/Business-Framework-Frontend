@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FinanceService } from '../data/finance.service';
 
 @Component({
   selector: 'app-finance',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FinanceComponent implements OnInit {
 
-  constructor() { }
+  barData: any = [];
+
+  constructor(private financeService: FinanceService) { }
 
   ngOnInit(): void {
+    this.barData = this.financeService.turnoverEachMonth()
   }
 
 }

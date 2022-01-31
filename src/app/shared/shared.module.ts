@@ -16,6 +16,7 @@ import { HighchartsChartModule } from 'highcharts-angular';
 import { CardComponent } from './widgets/card/card.component';
 import { PieComponent } from './widgets/pie/pie.component';
 import { BarComponent } from './widgets/bar/bar.component';
+import { MapComponent } from './widgets/map/map.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BarComponent } from './widgets/bar/bar.component';
     AreaComponent,
     CardComponent,
     PieComponent,
-    BarComponent
+    BarComponent,
+    MapComponent
   ],
   imports: [
     CommonModule,

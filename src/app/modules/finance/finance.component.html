@@ -1,1 +1,87 @@
-<p>finance works!</p>
+
+
+
+<br>
+
+<mat-divider></mat-divider>
+
+<br>
+<div fxLayoutGap="20px">
+    <div fxFlex="60">
+        <app-widget-bar 
+            [data]="barData"
+            title="Turnover"
+            subtitle="Source : Cost Center"
+            [xAxis]="['January', 'February', 'March', 'April', 'Mai', 'June', 'July', 'August', 'September', 'October', 'November', 'Dezember']"
+            yAxis="Count">
+        </app-widget-bar>
+    </div>
+    <div fxflex="40">
+
+        <table>
+            <tr>
+                <th>Capital</th>
+                <th>in €</th>
+            </tr>
+            <tr>
+                <td>Equity capital</td>
+                <td>25.000.000</td>
+            </tr>
+            <tr>
+                <td>Total capital</td>
+                <td>28.000.000</td>
+            </tr>
+            <tr>
+                <td>Debt capital</td>
+                <td>3.000.000</td>
+            </tr>
+            <tr>
+                <td>Annual profit</td>
+                <td>3.120.000</td>
+            </tr>
+        </table>
+
+        <br>
+
+        <table>
+            <tr>
+                <th>Profit</th>
+                <th>in €</th>
+            </tr>
+            <tr>
+                <td>Profit</td>
+                <td>18.500.000</td>
+            </tr>
+            <tr>
+                <td>Turnover</td>
+                <td>27.800.000</td>
+            </tr>
+            <tr>
+                <td>Operating costs</td>
+                <td>9.300.000</td>
+            </tr>
+        </table>
+
+        <br>
+
+        <table>
+            <tr>
+                <th>Fixed assets</th>
+                <th>in €</th>
+            </tr>
+            <tr>
+                <td>Properties</td>
+                <td>100.000.000</td>
+            </tr>
+            <tr>
+                <td>Machines</td>
+                <td>32.500.000</td>
+            </tr>
+            <tr>
+                <td>Securities</td>
+                <td>8.000.000</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
