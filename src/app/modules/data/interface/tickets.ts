@@ -1,5 +1,5 @@
 export interface Tickets{
     ticketTime: number;
     targetAchievement: number;
-    ticketCourse: {};
+    ticketCourse: any;
 }

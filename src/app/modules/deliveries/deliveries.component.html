@@ -1,4 +1,4 @@
-<div fxLayout="row" fxLayoutAlign ="space-between center" >
+<div fxLayout="row" fxLayoutAlign ="space-between center" fxLayoutGap="20px" class="stats-cards">
     <mat-card fxFlex="100">
         <mat-card-title>Average duration</mat-card-title>
         <mat-card-content>
@@ -29,21 +29,29 @@
 
 <br>
 
-<div >
-    <app-widget-area
-        [data]="areaDataDeliveries" 
-        title="Delivery distribution" 
-        yAxis="Number of distribution" 
-        xAxis="Range: Januar to December"
-        [pointStart]="1" >
-    </app-widget-area>
+<div>
+    <div fxflex = "60">
+        <app-widget-area
+            [data]="areaDataDeliveries" 
+            title="Delivery distribution" 
+            yAxis="Number of distribution" 
+            xAxis="Range: Januar to December"
+            [pointStart]="1" >
+        </app-widget-area>
+    </div>
+    <div>
+        <div fxFlex ="40">
+            <app-widget-pie [data] ="pieDataDeliveries" title="Supplier utilization"></app-widget-pie>
+        </div>
+    </div>
 </div>
 
-<br> 
-<mat-divider></mat-divider>
 
-<br>
+
+<!-- <br>
+
+<mat-divider></mat-divider>
 
 <div fxFlex ="40">
     <app-widget-pie [data] ="pieDataDeliveries" title="Supplier utilization"></app-widget-pie>
-</div>
+</div> -->

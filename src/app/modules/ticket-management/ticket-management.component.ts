@@ -21,6 +21,6 @@ export class TicketManagementComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    //this.tickets$ = this._ticketsService.getTicketsAvg();
+    // this.tickets$ = this._ticketsService.getTicketsAvg();
   }
 }
