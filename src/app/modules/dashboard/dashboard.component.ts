@@ -5,7 +5,6 @@ import { MatPaginator } from '@angular/material/paginator';
 import { BusinessPartner } from '../data/interface/business-partner';
 import { TicketsService } from '../data/tickets.service';
 import { Tickets } from '../data/interface/tickets';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-dashboard',

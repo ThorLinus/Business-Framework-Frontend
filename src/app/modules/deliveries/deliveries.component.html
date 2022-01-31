@@ -39,19 +39,11 @@
             [pointStart]="1" >
         </app-widget-area>
     </div>
-    <div>
-        <div fxFlex ="40">
-            <app-widget-pie [data] ="pieDataDeliveries" title="Supplier utilization"></app-widget-pie>
-        </div>
+    
+    <div fxFlex ="40">
+        <app-widget-pie 
+            [data] ="pieDataDeliveries" 
+            title="Supplier utilization">
+        </app-widget-pie>
     </div>
 </div>
-
-
-
-<!-- <br>
-
-<mat-divider></mat-divider>
-
-<div fxFlex ="40">
-    <app-widget-pie [data] ="pieDataDeliveries" title="Supplier utilization"></app-widget-pie>
-</div> -->
