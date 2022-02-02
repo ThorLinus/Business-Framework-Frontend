@@ -30,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ServiceService } from 'src/app/modules/data/service.service';
 import { FormsModule } from '@angular/forms';
 import { TicketsService } from 'src/app/modules/data/tickets.service';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { TicketsService } from 'src/app/modules/data/tickets.service';
     MatInputModule,
     MatButtonModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatToolbarModule
 
   ],
   providers: [
