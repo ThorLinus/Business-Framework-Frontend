@@ -32,6 +32,7 @@ import { FormsModule } from '@angular/forms';
 import { TicketsService } from 'src/app/modules/data/tickets.service';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,17 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatButtonModule,
     HttpClientModule,
     FormsModule,
-    MatToolbarModule
+    MatToolbarModule,
+
+    NgCircleProgressModule.forRoot({
+      radius: 100,
+      outerStrokeWidth: 16,
+      innerStrokeWidth: 8,
+      outerStrokeColor: "#023E8A",
+      innerStrokeColor: "#023d8a26",
+      outerStrokeGradientStopColor: "#023E8A",
+      animationDuration: 300,
+    })
 
   ],
   providers: [
