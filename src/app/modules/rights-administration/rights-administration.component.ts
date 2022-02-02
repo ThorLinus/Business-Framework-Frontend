@@ -32,7 +32,7 @@ export class RightsAdministrationComponent implements OnInit {
 
 const BP_DATA: RightsAdministration[] = [
   {position: 1  ,name: 'Mustermann', surname: 'Max', department: 'IT-C1', email: 'max.mustermann@tigris.com', role: 'IT-Admin'},
-  {position: 2  ,name: 'Mueller', surname: 'Joerg', department: 'IT-C1', email: 'joerg.mueller@tigris.com', role: 'IT-Support'},
+  {position: 2  ,name: 'Mueller', surname: 'Jörg', department: 'IT-C1', email: 'joerg.mueller@tigris.com', role: 'IT-Support'},
   {position: 3  ,name: 'Schulze', surname: 'Louisa', department: 'IT-C1', email: 'louisa.schulze@tigris.com', role: 'IT-Support'},
   {position: 4  ,name: 'Wintermaier', surname: 'Anna', department: 'IT-C1', email: 'anna.wintermaier@tigris.com', role: 'IT-Systemadministrator'}
 ];
