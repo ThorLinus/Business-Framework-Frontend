@@ -9,6 +9,7 @@ Before depolying to the development server the following commands need to be exe
 - `npm i highcharts --save`
 - `npm i @angular/flex-layout @angular/cdk`
 - `npm install ng-circle-progress --save`
+- `npm install bootstrap`
 
 Highcharts is used to plot serveral charts.
 

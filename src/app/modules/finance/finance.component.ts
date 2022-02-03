@@ -16,4 +16,5 @@ export class FinanceComponent implements OnInit {
     this.barData = this.financeService.turnoverEachMonth()
   }
 
+
 }
