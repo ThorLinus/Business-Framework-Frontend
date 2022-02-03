@@ -8,6 +8,10 @@ import { Tickets } from './interface/tickets';
 })
 export class TicketsService {
 
+  /*
+    Dashboard
+  */
+
   private ticketURL: string = 'http://localhost:8080/api/dashboard/TicketsAvg'
   public tickets: any;
   public ticketTime: any;
@@ -16,6 +20,9 @@ export class TicketsService {
 
   constructor(private _http: HttpClient) { }
 
+  /*
+     Dashboard
+  */
   public getTicketTime(){
 
     return this._http.get<Tickets>(this.ticketURL).subscribe(
@@ -42,4 +49,46 @@ export class TicketsService {
       }
     )
   }
+
+
+  /*
+    Hier werden die Daten für das Kreisdiagramm erstellt
+    Bei Fertigstellung sollen hier die Daten aus dem Backend abgerufen werden.
+  */
+  ticketPieData(){
+    return[{
+      name:'Tickets',
+      colorByPoint:true,
+      data:[{
+        name: 'open',
+        y:14,
+        selected: true,
+        color: 'yellow'
+      }, {
+        name:'In progress',
+        y: 39,
+        color: 'orange'
+      }, {
+        name:'done',
+        y: 237,
+        color: 'green'
+      }, {
+        name: 'escalated',
+        y: 1,
+        color: 'red'
+      }]
+    }]
+  }
+
+    /*
+    Hier werden die Daten für das Liniendiagramm erstellt
+    Bei Fertigstellung sollen hier die Daten aus dem Backend abgerufen werden.
+    */
+  ticketAreaData(){
+    return[{
+      name: 'Number of Tickets',
+      data: [270, 200, 150, 240, 260, 290, 230, 140, 170, 270,240, 260]
+    }
+  ]}  
+
 }

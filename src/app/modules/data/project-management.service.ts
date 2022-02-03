@@ -9,7 +9,7 @@ export class ProjectManagementService {
 
   /*
     Hier werden die Daten für das Balkendiagramm erstellt
-    Bei fertigstellung sollen hier die Daten aus dem Backend abgerufen werden.
+    Bei Fertigstellung sollen hier die Daten aus dem Backend abgerufen werden.
   */
   currentProjects(){
     return[
