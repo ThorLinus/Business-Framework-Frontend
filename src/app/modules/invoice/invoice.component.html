@@ -1,0 +1,239 @@
+<div fxLayout="row" fxLayoutAlign ="space-between center" fxLayoutGap="20px" class="stats-cards">
+    <mat-card fxFlex="100">
+        <mat-card-content>
+            <mat-card fxFlex="20" style="margin-right:20px">
+                <mat-card-title>Robert Bosch GmbH</mat-card-title>
+                <mat-card-content>
+                    <p id="number">
+                        <br>
+                        33
+                        <br>
+                    </p>
+                    <p id="ticketContent">
+                        <br>
+                        Comparison to last month
+                        <br>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8%" height="8%" color="green" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                            <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                        </svg>
+                        2%
+                    </p>
+                </mat-card-content>
+            </mat-card>
+            <mat-card fxFlex="20" style="margin-right:20px">
+                <mat-card-title>Dachser GmbH</mat-card-title>
+                <mat-card-content>
+                    <p id="number">
+                        <br>
+                        89
+                        <br>
+                    </p>
+                    <p id="ticketContent">
+                        <br>
+                        comparison to last month
+                        <br>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8%" height="8%" color="green" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                            <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                        </svg>
+                        19%
+                    </p>
+                </mat-card-content>
+            </mat-card>
+            <mat-card fxFlex="20" style="margin-right:20px">
+                <mat-card-title>BASF SE</mat-card-title>
+                <mat-card-content>
+                    <p id="number">
+                        <br>
+                        156
+                        <br>
+                    </p>
+                    <p id="ticketContent">
+                        <br>
+                        comparison to last month
+                        <br>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8%" height="8%" color="green" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                            <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                        </svg>
+                        11%
+                    </p>
+                </mat-card-content>
+            </mat-card>
+            <mat-card fxFlex="20" style="margin-right:20px">
+                <mat-card-title>DB Mobility Logistics</mat-card-title>
+                <mat-card-content>
+                    <p id="number">
+                        <br>
+                        345
+                        <br>
+                    </p>
+                    <p id="ticketContent">
+                        <br>
+                        comparison to last month
+                        <br>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8%" height="8%" color="green" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                            <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                        </svg>
+                        9%
+                    </p>
+                </mat-card-content>
+            </mat-card>
+            <mat-card fxFlex="20">
+                <mat-card-title>United Parcel Service (UPS)</mat-card-title>
+                <mat-card-content>
+                    <p id="number">
+                        <br>
+                        5
+                        <br>
+                    </p>
+                    <p id="ticketContent">
+                        <br>
+                        comparison to last month
+                        <br>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8%" height="8%" color="red" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                        </svg>
+                        60%
+                    </p>
+                </mat-card-content>
+            </mat-card>
+        </mat-card-content>
+
+    </mat-card>
+</div>
+
+<br>
+
+<mat-divider></mat-divider>
+
+<br>
+<div fxLayout="row" fxLayoutAlign ="space-between center" fxLayoutGap="20px" class="stats-cards">
+    <mat-card fxFlex="50">
+        <div id="pieChart">
+            <app-widget-pie 
+                [data]="invoicePieData" 
+                title="Invoice December 2021">
+            </app-widget-pie>
+        </div>
+    </mat-card>
+    
+    <div id="myProjects" fxLayout="row" fxLayoutAlign ="space-between center" fxLayoutGap="20px" class="stats-cards">
+        <mat-card fxFlex="100">
+            <mat-card-title>Invoice status</mat-card-title>
+            <br>
+            <mat-card-content>
+                <div>
+                    <mat-card fxFlex="50" style="margin-right:20px; margin-bottom: 20px">
+                        <mat-card-title>                        
+                                Robert Bosch GmbH
+                        </mat-card-title>
+                        <br>
+                        <mat-card-content>
+                            <p id="contentText">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="7%" height="7%" color="green " fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8"/>
+                                </svg>
+                                receive 13
+                            </p>
+                            <p id="contentText">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="7%" height="7%" color="red" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8"/>
+                                </svg>
+                                open 20
+                            </p>
+                        </mat-card-content>
+                    </mat-card>
+
+                    <mat-card fxFlex="50" style="margin-right:20px; margin-bottom: 20px">
+                        <mat-card-title>                        
+                                Dachser GmbH
+                        </mat-card-title>
+                        <br>
+                        <mat-card-content>
+                            <p id="contentText">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="7%" height="7%" color="green " fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8"/>
+                                </svg>
+                                receive 80
+                            </p>
+                            <p id="contentText">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="7%" height="7%" color="red" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8"/>
+                                </svg>
+                                open 9
+                            </p>
+                        </mat-card-content>
+                    </mat-card>
+
+                    <mat-card fxFlex="50" style="margin-right:20px; margin-bottom: 20px">
+                        <mat-card-title>                        
+                                BASF SE
+                        </mat-card-title>
+                        <br>
+                        <mat-card-content>
+                            <p id="contentText">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="7%" height="7%" color="green " fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8"/>
+                                </svg>
+                                receive 152
+                            </p>
+                            <p id="contentText">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="7%" height="7%" color="red" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8"/>
+                                </svg>
+                                open 4
+                            </p>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+
+                <br>
+
+                <div>
+                    <mat-card fxFlex="50" style="margin-right:20px; margin-bottom: 20px">
+                        <mat-card-title>                        
+                            DB Mobility Logistics
+                        </mat-card-title>
+                        <br>
+                        <mat-card-content>
+                            <p id="contentText">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="7%" height="7%" color="green " fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8"/>
+                                </svg>
+                                receive 250
+                            </p>
+                            <p id="contentText">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="7%" height="7%" color="red" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8"/>
+                                </svg>
+                                open 95
+                            </p>
+                        </mat-card-content>
+                    </mat-card>
+
+                    <mat-card fxFlex="50" style="margin-right:20px; margin-bottom: 20px">
+                        <mat-card-title>                        
+                            United Parcel Service (UPS)
+                        </mat-card-title>
+                        <br>
+                        <mat-card-content>
+                            <p id="contentText">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="7%" height="7%" color="green " fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8"/>
+                                </svg>
+                                receive 5
+                            </p>
+                            <p id="contentText">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="7%" height="7%" color="red" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                                    <circle cx="8" cy="8" r="8"/>
+                                </svg>
+                                open 0
+                            </p>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    
+    
+</div>    

@@ -6,7 +6,7 @@
 <div fxLayout="row" fxLayoutAlign ="space-between center" fxLayoutGap="20px" class="stats-cards">
     <mat-card fxFlex="100">
         <mat-card-content>
-            <mat-card fxFlex="20">
+            <mat-card fxFlex="20" style="margin-right:20px">
                 <mat-card-title>Created Tickets</mat-card-title>
                 <mat-card-content>
                     <p id="number">
@@ -25,7 +25,7 @@
                     </p>
                 </mat-card-content>
             </mat-card>
-            <mat-card fxFlex="20">
+            <mat-card fxFlex="20" style="margin-right:20px">
                 <mat-card-title>Open</mat-card-title>
                 <mat-card-content>
                     <p id="number">
@@ -44,7 +44,7 @@
                     </p>
                 </mat-card-content>
             </mat-card>
-            <mat-card fxFlex="20">
+            <mat-card fxFlex="20" style="margin-right:20px">
                 <mat-card-title>In progress</mat-card-title>
                 <mat-card-content>
                     <p id="number">
@@ -63,7 +63,7 @@
                     </p>
                 </mat-card-content>
             </mat-card>
-            <mat-card fxFlex="20">
+            <mat-card fxFlex="20" style="margin-right:20px">
                 <mat-card-title>Done</mat-card-title>
                 <mat-card-content>
                     <p id="number">
@@ -113,25 +113,31 @@
     Hier wird die Component "pie" (app\shared\widgets) aufgerufen und die benötigten Informationen werden mitgegeben.
     Daten "ticketPieData" werden dabei aus dem TicketService geholt.
 -->
-<div id="pieChart" fxLayout="row" fxLayoutAlign ="space-between center" fxLayoutGap="20px" class="stats-cards">
-    <app-widget-pie [data]="ticketPieData" title="Ticket overview"></app-widget-pie>
-</div>
-
-<!--
-    Container, in dem das Liniendiagramm zu der Anzahl der Tickets im Jahr 2021 pro Monat angezeigt wird.
-    Hier wird die Component "area" (app\shared\widgets) aufgerufen und die benötigten Informationen werden mitgegeben.
-    Daten "ticketAreaData" werden dabei aus dem TicketService geholt.
--->
-<div  id="areaChart">
-    <app-widget-area 
-        [data]="ticketAreaData" 
-        title="Ticket overview" 
-        subtitle="Year 2021" 
-        yAxis="Number of Tickets" 
-        xAxis="Range: January to Dezember"
-        [xAxisCategories]="['January', 'February', 'March', 'April', 'Mai', 'June', 'July', 'August', 'September', 'October', 'November', 'Dezember']"
-        [pointStart]="0">
-    </app-widget-area>
+<div fxLayout="row" fxLayoutAlign ="space-between center" fxLayoutGap="20px" class="stats-cards">
+    <div id="pieChart" fxFlex="40">
+        <app-widget-pie 
+            [data]="ticketPieData" 
+            title="Ticket overview by category">
+        </app-widget-pie>
+    </div>
+    
+    <!--
+        Container, in dem das Liniendiagramm zu der Anzahl der Tickets im Jahr 2021 pro Monat angezeigt wird.
+        Hier wird die Component "area" (app\shared\widgets) aufgerufen und die benötigten Informationen werden mitgegeben.
+        Daten "ticketAreaData" werden dabei aus dem TicketService geholt.
+    -->
+    <div  id="areaChart" fxFlex="60">
+        <app-widget-area 
+            [data]="ticketAreaData" 
+            title="Ticket monthly last year" 
+            subtitle="Year 2021" 
+            yAxis="Number of Tickets" 
+            xAxis="Range: January to Dezember"
+            [xAxisCategories]="['January', 'February', 'March', 'April', 'Mai', 'June', 'July', 'August', 'September', 'October', 'November', 'Dezember']"
+            [pointStart]="0">
+        </app-widget-area>
+    </div>
+    
 </div>
 
 

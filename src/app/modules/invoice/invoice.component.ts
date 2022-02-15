@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InvoiceService } from '../data/invoice.service';
 
 @Component({
   selector: 'app-invoice',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InvoiceComponent implements OnInit {
 
-  constructor() { }
+  invoicePieData: any=[];
+
+  constructor(public _invoiceService: InvoiceService) { }
 
   ngOnInit(): void {
+    this.invoicePieData = this._invoiceService.ticketPieData();
   }
 
 }

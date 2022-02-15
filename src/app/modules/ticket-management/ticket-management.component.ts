@@ -15,7 +15,7 @@ export class TicketManagementComponent implements OnInit {
   ticketPieData: any=[];
   ticketAreaData: any=[];
 
-  constructor(public _ticketsService: TicketsService, private_router: Router) {
+  constructor(public _ticketsService: TicketsService, private router: Router) {
     this.tickets$={
       ticketTime: 0,
       targetAchievement: 0,
