@@ -55,6 +55,7 @@ export class DashboardComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
   }
 
+  // Get the data from the service which is connected to the backend to provide the data from the backend to the dashboard - card-components
   //https://stackoverflow.com/questions/42211175/typescript-hashmap-dictionary-interface
   //https://www.highcharts.com/docs/chart-concepts/series
   public loadData():void{

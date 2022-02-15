@@ -12,7 +12,7 @@ import { RightsAdministrationComponent } from './modules/rights-administration/r
 import { TicketManagementComponent } from './modules/ticket-management/ticket-management.component';
 import { UserComponent } from './modules/user/user.component';
 
-
+// These are the endpoints in the url to the associated pages.
 const routes: Routes = [{
   path: 'home',
   component: DefaultComponent,

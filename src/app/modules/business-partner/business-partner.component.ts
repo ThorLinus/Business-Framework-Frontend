@@ -11,7 +11,6 @@ import { BusinessPartner } from '../data/interface/business-partner';
 })
 export class BusinessPartnerComponent implements OnInit {
 
-  // tableDataBP: any = [];
   areaDataBP: any = [];
   totalBPeachYear: any = [];
   totalCustomerYear: any = [];
@@ -28,8 +27,8 @@ export class BusinessPartnerComponent implements OnInit {
 
   constructor(private businessPartnerService : BusinessPartnerService) { }
 
+  // Get the data from the BusinessPartnerService and provide the data for the hmtl-file
   ngOnInit(): void {
-    // this.tableDataBP=this.businessPartnerService.tableDataBP();
     this.areaDataBP = this.businessPartnerService.areaDataBP();
     this.totalBPeachYear = this.businessPartnerService.totalBPeachYear();
     this.totalCustomerYear = this.businessPartnerService.totalCustomerYear();
@@ -37,6 +36,7 @@ export class BusinessPartnerComponent implements OnInit {
   }
 }
 
+// Table data for the buisness-partner page
 const BP_DATA: BusinessPartner[] = [
   {position: 1  ,companyName: 'Apple'                 ,industry: 'Technologie'    ,goods: 'H'   ,dateStart: '2014-01-01'  ,dateEnd: '2030-12-31'},
   {position: 2  ,companyName: 'Saudi Aramco'          ,industry: 'Öl und Gas'     ,goods: 'He'  ,dateStart: '2014-01-01'  ,dateEnd: '2030-12-31'},

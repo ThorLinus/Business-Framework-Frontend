@@ -13,7 +13,7 @@ export class ProjectManagementComponent implements OnInit {
   constructor(private projectManagementService : ProjectManagementService) { }
 
   /*
-    Hier werden die Daten aus dem procejtManagementService geholt. 
+    Here the data is fetched from the projectManagementService. 
   */
   ngOnInit(): void {
     this.currentProjects = this.projectManagementService.currentProjects();

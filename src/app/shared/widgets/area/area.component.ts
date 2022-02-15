@@ -7,6 +7,10 @@ import HC_exporting from 'highcharts/modules/exporting';
   templateUrl: './area.component.html',
   styleUrls: ['./area.component.scss']
 })
+/*
+*   This highchart area chart is tried to implement generic as possible, so that if used the information can change for each usage.
+*   With '<app-widget-area @input ...>' the area chart can be shown in the html file 
+*/
 export class AreaComponent implements OnInit {
 
   chartOptions = {};

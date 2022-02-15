@@ -1,7 +1,6 @@
 <!--
-    Container, im dem die Anzahl der Tickets mit dem jeweiligen Status angezeigt wird.
-    Aufgebaut ist dieser mit Angular Materials "mat-card"
-    Die verwendeten bilder wurd von der Seite https://icons.getbootstrap.com/ abgerufen
+    Component in which the count of the tickets and the asscoicated status is shown.
+    The icons are form https://icons.getbootstrap.com/
 -->
 <div fxLayout="row" fxLayoutAlign ="space-between center" fxLayoutGap="20px" class="stats-cards">
     <mat-card fxFlex="100">
@@ -109,9 +108,9 @@
 <br>
 
 <!--
-    Container, in dem das Kreisdiagram zu der Anzahl und Status der Tickets angezeigt wird.
-    Hier wird die Component "pie" (app\shared\widgets) aufgerufen und die benötigten Informationen werden mitgegeben.
-    Daten "ticketPieData" werden dabei aus dem TicketService geholt.
+    Container in which the pie chart about the number and status of tickets is displayed.
+    Here, the component "pie" (app\shared\widgets) is called and the required information is provided.
+    The data "ticketPieData" is fetched from the TicketService.
 -->
 <div fxLayout="row" fxLayoutAlign ="space-between center" fxLayoutGap="20px" class="stats-cards">
     <div id="pieChart" fxFlex="40">
@@ -122,9 +121,9 @@
     </div>
     
     <!--
-        Container, in dem das Liniendiagramm zu der Anzahl der Tickets im Jahr 2021 pro Monat angezeigt wird.
-        Hier wird die Component "area" (app\shared\widgets) aufgerufen und die benötigten Informationen werden mitgegeben.
-        Daten "ticketAreaData" werden dabei aus dem TicketService geholt.
+        Container in which the line chart about the number of tickets in 2021 per month is displayed.
+        Here, the component "area" (app\shared\widgets) is called and the required information is provided.
+        The data "ticketAreaData" is fetched from the TicketService.
     -->
     <div  id="areaChart" fxFlex="60">
         <app-widget-area 

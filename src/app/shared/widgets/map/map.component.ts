@@ -1,3 +1,8 @@
+
+// With this component a map could be shown on the page, but it is not completed yet
+// This is a possibilty to implement the map in future iterations of the project
+
+
 // import { Component, OnInit } from '@angular/core';
 // import * as Highcharts from 'highcharts';
 // import worldMap from '@highchart/map-collection/custom/world.geo.json';

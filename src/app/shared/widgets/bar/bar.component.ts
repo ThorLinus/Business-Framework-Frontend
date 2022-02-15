@@ -7,6 +7,11 @@ import HC_exporting from 'highcharts/modules/exporting';
   templateUrl: './bar.component.html',
   styleUrls: ['./bar.component.scss']
 })
+
+/*
+*   This highchart bar chart is tried to implement generic as possible, so that if used the information can change for each usage.
+*   With '<app-widget-bar @input ...>' the bar chart can be shown in the html file 
+*/
 export class BarComponent implements OnInit {
 
   chartOptions = {};

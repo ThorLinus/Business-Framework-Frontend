@@ -1,7 +1,7 @@
 <!--
-    Container, in denen der aktuelle Status zu den Projekten des Users angezeigt wird.
-    Aufgebaut ist dieser mit Angular Materials "mat-card"
-    Die verwendeten bilder wurd von der Seite https://icons.getbootstrap.com/ abgerufen
+    The actual status of the project in which the user is involved will be shown.
+    Angular Materials - mat-card - is the foundation of this page.
+    The used icons can be found here: https://icons.getbootstrap.com/
 -->
 <div id="myProjects" fxLayout="row" fxLayoutAlign ="space-between center" fxLayoutGap="20px" class="stats-cards">
     <mat-card fxFlex="100">
@@ -123,7 +123,7 @@
             </div>
             <br>
             <!--
-                Button, der bei Fertigstellung zum Projektmanagemet Toll führen soll
+                Button that should lead to the Project Managemet Toll when completed.
             -->
             <div id="ProjectButon">
                 <button mat-raised-button>To Project-Management</button>
@@ -135,9 +135,9 @@
 </div>
 
 <!--
-    Container, in denen die für den User freigegebenen Projekten mit dem Status angezeigt wird.
-    Aufgebaut ist dieser mit Angular Materials "mat-card".
-    Die verwendeten bilder wurd von der Seite https://icons.getbootstrap.com/ abgerufen.
+    Container in which the projects released for the user are displayed with the status.
+    This is built with Angular materials "mat-card".
+    The images used were retrieved from the page https://icons.getbootstrap.com/.
 -->
 <div id="forMeReleased" fxLayout="row" fxLayoutAlign ="space-between center" fxLayoutGap="20px" class="stats-cards">
     <mat-card fxFlex="100">
@@ -209,9 +209,9 @@
 <br>
 
 <!--
-    Contaier für das Balkendiagram, dass die Anzahl der aktuellen Projekte, aufgetielt in offen, laufend und erledigt, darstellt.
-    Hier wird die Component "bar" (app\shared\widgets) aufgerufen und die benötigten Informationen werden mitgegeben.
-    Daten "currentProjects" werden dabei aus dem projectManagementService geholt.
+    Contaier for the bar chart that shows the number of current projects, divided into open, ongoing and completed.
+    Here the component "bar" (app\shared\widgets) is called and the required information is provided.
+    Data "currentProjects" are fetched from the projectManagementService.
 -->
 <div id="barChart" >
 

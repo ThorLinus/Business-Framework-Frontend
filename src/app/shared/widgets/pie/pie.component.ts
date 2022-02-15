@@ -7,6 +7,10 @@ import HC_exporting from 'highcharts/modules/exporting';
   templateUrl: './pie.component.html',
   styleUrls: ['./pie.component.scss']
 })
+/*
+*   This highchart pie chart is tried to implement generic as possible, so that if used the information can change for each usage.
+*   With '<app-widget-pie @input ...>' the pie chart can be shown in the html file 
+*/
 export class PieComponent implements OnInit {
 
   Highcharts = Highcharts;

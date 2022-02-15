@@ -11,7 +11,28 @@ Before depolying to the development server the following commands need to be exe
 - `npm install ng-circle-progress --save`
 - `npm install bootstrap`
 
-Highcharts is used to plot serveral charts.
+Highcharts is used to plot serveral charts (e.g. area, bar and pie charts).
+
+The structure of the project is as follows:
+
+- layouts/ modules
+    - used to store each component for each subpages (e.g. business partner or dasboard)
+    - the data folder to build the connection to the backend (services for each component)
+- shared
+    - used to store the components which can be accesed by the pages-components
+        - each chart-componenet
+        - header/ footer and sidebar-navigation pannel
+- default
+    - used to build the main foundation with the header/ footer and sidebar-navigation
+    - route to each subpage
+
+## Structure of the data traffic
+
+The main construct is always the same and differs only in the associated classes.
+
+1. HTML file is to show the data and get the data from the corresponding ts-file
+2. TS receives the data from the connceted service class
+3. If the data is static the service class is the provider of the data but if the service class (e.g. login and dashboard) is connected to the corresponding backend the backend is the provider of the data. In the second case the data is transfered dynamically through the layers to the html file
 
 ## Used configuration
 
