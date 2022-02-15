@@ -3,8 +3,8 @@ import { DashboardService } from '../data/dashboard.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { BusinessPartner } from '../data/interface/business-partner';
-import { TicketsService } from '../data/tickets.service';
-import { Tickets } from '../data/interface/tickets';
+import { Observable } from 'rxjs';
+import {ServiceService} from "../data/service.service";
 
 @Component({
   selector: 'app-dashboard',
@@ -16,9 +16,21 @@ export class DashboardComponent implements OnInit {
   areaData: any = [];
   cardData: any = [];
   pieData: any = [];
-  ticketTime: any = [];
-  targetAchievement: any = [];
-  ticketCourse: any = [];
+  ticketTime: any;
+  targetAchievement: any;
+  ticketCourse: any;
+
+  newCustomerNumber: any;
+  targetAchievementCustomer: any;
+  customerIncrease: any;
+
+  ticketNewTime: any;
+  targetAchievementNewTickets: any;
+  ticketCourseNewTickets: any;
+
+  invoiceNumber: any;
+  targetAchievementInvoice: any;
+  invoiceCourse: any;
 
   displayedColumns: string[] = ['companyName', 'industry', 'goods', 'dateStart', 'dateEnd'];
   dataSource = new MatTableDataSource<BusinessPartner>(BP_DATA);
@@ -26,21 +38,57 @@ export class DashboardComponent implements OnInit {
   @ViewChild(MatPaginator, { static: true })
   paginator!: MatPaginator;
 
+
+
   ngAfterViewInit(): void {
     this.dataSource.paginator = this.paginator;
-  }  
+  }
 
-  constructor(private dashboardService: DashboardService, private ticketService: TicketsService) { }
+  constructor(private dashboardService: DashboardService, private _service : ServiceService) {
+    this.loadData();
+  }
 
   ngOnInit(): void {
-    this.areaData = this.dashboardService.areaData();
+   this.areaData = this.dashboardService.areaData();
     this.cardData = this.dashboardService.cardData();
     this.pieData = this.dashboardService.pieData();
-    this.ticketTime = this.ticketService.getTicketTime();
-    this.targetAchievement = this.ticketService.getTargetAchievement();
-    this.ticketCourse = this.ticketService.getTicketCourse
     this.dataSource.paginator = this.paginator;
   }
+
+  //https://stackoverflow.com/questions/42211175/typescript-hashmap-dictionary-interface
+  //https://www.highcharts.com/docs/chart-concepts/series
+  public loadData():void{
+    this._service.getNewCustomer().subscribe((data)=>{
+      this.newCustomerNumber = data.newCostumerNumber;
+      this.targetAchievementCustomer = data.targetAchievement;
+      let map = new Map(data.customerIncrease);
+      console.log("Meine Map"+map)
+      console.log(data.newCostumerNumber)
+      console.log(data.targetAchievement)
+      console.log(data.customerIncrease)
+    })
+    this._service.getTicketAvg().subscribe((data)=>{
+      this.ticketTime = data.ticketTime;
+      this.targetAchievement = data.targetAchievement;
+      console.log(data.ticketTime);
+      console.log(data.targetAchievement);
+      console.log(data.ticketCourse)
+    } )
+    this._service.getNewTickets().subscribe((data) =>{
+      this.ticketNewTime = data.ticketTime;
+      this.targetAchievementNewTickets = data.targetAchievement;
+      this.ticketCourseNewTickets = data.ticketCourse;
+      console.log(data.ticketTime);
+      console.log(data.targetAchievement);
+      console.log(data.ticketCourse)
+    })
+    this._service.getInvoice().subscribe((data)=>{
+      this.invoiceNumber = data.invoiceNumber;
+      this.targetAchievementInvoice = data.targetAchievement.toFixed(2);
+      this.invoiceCourse = data.invoiceCourse;
+    })
+  }
+
 }
 
 const BP_DATA: BusinessPartner[] = [

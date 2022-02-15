@@ -1,9 +1,9 @@
 <div>
-    <app-widget-area 
-        [data]="areaData" 
-        title="Employee development per sector" 
-        subtitle="Year 2015 - today" 
-        yAxis="Number of employees" 
+    <app-widget-area
+        [data]="areaData"
+        title="Employee development per sector"
+        subtitle="Year 2015 - today"
+        yAxis="Number of employees"
         xAxis="Range: 2015 to 2021"
         [pointStart]="2015">
     </app-widget-area>
@@ -17,16 +17,16 @@
 
 <div fxLayout="row" fxLayoutAlign ="space-between center" fxLayoutGap="20px" class="stats-cards">
     <mat-card fxFlex="25">
-        <app-widget-card label="New Customer" total="1k" percentage="20" [data]="cardData"></app-widget-card>
+        <app-widget-card label="New Customer" [total]="newCustomerNumber" [percentage]="targetAchievementCustomer" [data]="customerIncrease"></app-widget-card>
     </mat-card>
     <mat-card fxFlex="25">
         <app-widget-card label="Avg. Ticket-time" [total]="ticketTime" [percentage]="targetAchievement" [data]="ticketCourse"></app-widget-card>
     </mat-card>
     <mat-card fxFlex="25">
-        <app-widget-card label="New Tickets" total="10" percentage="30" [data]="cardData"></app-widget-card>
+        <app-widget-card label="New Tickets" [total]="ticketNewTime" [percentage]="targetAchievementNewTickets" [data]="ticketCourseNewTickets"></app-widget-card>
     </mat-card>
     <mat-card fxFlex="25">
-        <app-widget-card label="Invoice" total="124" percentage="20" [data]="cardData"></app-widget-card>
+        <app-widget-card label="Invoice" [total]="invoiceNumber" [percentage]="targetAchievementInvoice" [data]="invoiceCourse"></app-widget-card>
     </mat-card>
 </div>
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Tickets } from '../data/interface/tickets';
+import { TicketDisplay } from '../data/interface/ticketDisplay';
 import { TicketsService } from '../data/tickets.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { TicketsService } from '../data/tickets.service';
 })
 export class TicketManagementComponent implements OnInit {
 
-  public tickets$: Tickets;
+  public tickets$: TicketDisplay;
 
   ticketPieData: any=[];
   ticketAreaData: any=[];
