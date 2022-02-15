@@ -1,0 +1,38 @@
+table {
+    width: 100%;
+}
+
+.mat-header-cell{
+    background: #023E8A;
+    color: white;
+}
+
+.mat-row:nth-child(even){
+    background-color: #023d8a26;
+}
+.mat-row:nth-child(odd){
+    background-color: white;
+}
+
+a:hover, a:active{
+    color: #023E8A;
+}
+
+mat-paginator{
+    width: 100%;
+    background: #f5f5f5;
+}
+
+.mat-button.mat-success,
+.mat-stroked-button.mat-success {
+    color: #023E8A;
+}
+.mat-button.mat-success:hover,
+.mat-stroked-button.mat-success:hover {
+  background-color: #023E8A;
+}
+
+button{
+    background-color: #023E8A;
+    color: white;
+}

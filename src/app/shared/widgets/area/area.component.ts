@@ -16,6 +16,7 @@ export class AreaComponent implements OnInit {
   @Input() yAxis: string = "";
   @Input() xAxis: string = "";
   @Input() pointStart: any = [];
+  @Input() xAxisCategories: any = [];
 
   Highcharts = Highcharts;
 
@@ -42,7 +43,8 @@ export class AreaComponent implements OnInit {
       xAxis: {
           accessibility: {
               rangeDescription: this.xAxis
-          }
+          },
+          categories: this.xAxisCategories,
       },
   
       legend: {

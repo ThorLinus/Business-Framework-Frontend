@@ -12,6 +12,9 @@ export class TicketManagementComponent implements OnInit {
 
   public tickets$: TicketDisplay;
 
+  ticketPieData: any=[];
+  ticketAreaData: any=[];
+
   constructor(public _ticketsService: TicketsService, private_router: Router) {
     this.tickets$={
       ticketTime: 0,
@@ -22,5 +25,7 @@ export class TicketManagementComponent implements OnInit {
 
   ngOnInit(): void {
     // this.tickets$ = this._ticketsService.getTicketsAvg();
+    this.ticketPieData = this._ticketsService.ticketPieData();
+    this.ticketAreaData = this._ticketsService.ticketAreaData(); 
   }
 }

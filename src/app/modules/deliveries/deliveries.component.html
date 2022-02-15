@@ -2,21 +2,81 @@
     <mat-card fxFlex="100">
         <mat-card-title>Average duration</mat-card-title>
         <mat-card-content>
-            <mat-card fxFlex="25">
-                <mat-card-title>Order placement</mat-card-title>
-                <mat-card-content>0,6 Tage</mat-card-content>
+
+            <mat-card fxFlex="25" style="margin-right:20px; margin-bottom: 20px">
+                <mat-card-title>
+                    <div id="share">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="7%" height="7%" color="red" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8"/>
+                        </svg>
+                    </div>
+                    <div id="titleText">
+                        0,6 Days
+                    </div>
+                </mat-card-title>
+                <br>
+                <mat-card-content>
+                    <p id="contentText">
+                        Order placement
+                    </p>
+                </mat-card-content>
             </mat-card>
-            <mat-card fxFlex="25">
-                <mat-card-title>Delivery confirmation</mat-card-title>
-                <mat-card-content>2,9 Tage</mat-card-content>
+
+            <mat-card fxFlex="25" style="margin-right:20px; margin-bottom: 20px">
+                <mat-card-title>
+                    <div id="share">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="7%" height="7%" color="red" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8"/>
+                        </svg>
+                    </div>
+                    <div id="titleText">
+                        2,9 Days
+                    </div>
+                </mat-card-title>
+                <br>
+                <mat-card-content>
+                    <p id="contentText">
+                        Delivery confirmation
+                    </p>
+                </mat-card-content>
             </mat-card>
-            <mat-card fxFlex="25">
-                <mat-card-title>Delivery time</mat-card-title>
-                <mat-card-content>2,4 Tage</mat-card-content>
+
+            <mat-card fxFlex="25" style="margin-right:20px; margin-bottom: 20px">
+                <mat-card-title>
+                    <div id="share">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="7%" height="7%" color="red" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8"/>
+                        </svg>
+                    </div>
+                    <div id="titleText">
+                        2,4 Days
+                    </div>
+                </mat-card-title>
+                <br>
+                <mat-card-content>
+                    <p id="contentText">
+                        Delivery Time
+                    </p>
+                </mat-card-content>
             </mat-card>
-            <mat-card fxFlex="25">
-                <mat-card-title>Invoicing</mat-card-title>
-                <mat-card-content>2,4 Tage</mat-card-content>
+
+            <mat-card fxFlex="25" style="margin-right:20px; margin-bottom: 20px">
+                <mat-card-title>
+                    <div id="share">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="7%" height="7%" color="red" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                            <circle cx="8" cy="8" r="8"/>
+                        </svg>
+                    </div>
+                    <div id="titleText">
+                        2,4 Days
+                    </div>
+                </mat-card-title>
+                <br>
+                <mat-card-content>
+                    <p id="contentText">
+                        Invoicing
+                    </p>
+                </mat-card-content>
             </mat-card>
         </mat-card-content>
 
@@ -29,29 +89,22 @@
 
 <br>
 
-<div>
-    <div fxflex = "60">
+<div fxLayout="row" fxLayoutAlign ="space-between center" fxLayoutGap="20px" class="stats-cards">
+    <div fxFlex = "60">
         <app-widget-area
             [data]="areaDataDeliveries" 
             title="Delivery distribution" 
             yAxis="Number of distribution" 
+            [xAxisCategories]="['January', 'February', 'March', 'April', 'Mai', 'June', 'July', 'August', 'September', 'October', 'November', 'Dezember']"
             xAxis="Range: Januar to December"
-            [pointStart]="1" >
+            [pointStart]="0">
         </app-widget-area>
     </div>
-    <div>
-        <div fxFlex ="40">
-            <app-widget-pie [data] ="pieDataDeliveries" title="Supplier utilization"></app-widget-pie>
-        </div>
+    
+    <div fxFlex ="40">
+        <app-widget-pie 
+            [data] ="pieDataDeliveries" 
+            title="Supplier utilization">
+        </app-widget-pie>
     </div>
 </div>
-
-
-
-<!-- <br>
-
-<mat-divider></mat-divider>
-
-<div fxFlex ="40">
-    <app-widget-pie [data] ="pieDataDeliveries" title="Supplier utilization"></app-widget-pie>
-</div> -->

@@ -8,5 +8,4 @@ import { TicketDisplay } from './interface/ticketDisplay';
 })
 export class TicketsService {
 
-
 }

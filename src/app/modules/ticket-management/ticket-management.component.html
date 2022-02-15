@@ -1,1 +1,141 @@
-<p>ticket-management works!</p>
+<!--
+    Container, im dem die Anzahl der Tickets mit dem jeweiligen Status angezeigt wird.
+    Aufgebaut ist dieser mit Angular Materials "mat-card"
+    Die verwendeten bilder wurd von der Seite https://icons.getbootstrap.com/ abgerufen
+-->
+<div fxLayout="row" fxLayoutAlign ="space-between center" fxLayoutGap="20px" class="stats-cards">
+    <mat-card fxFlex="100">
+        <mat-card-content>
+            <mat-card fxFlex="20">
+                <mat-card-title>Created Tickets</mat-card-title>
+                <mat-card-content>
+                    <p id="number">
+                        <br>
+                        75
+                        <br>
+                    </p>
+                    <p id="ticketContent">
+                        <br>
+                        comparison to yesterday
+                        <br>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8%" height="8%" color="green" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                        </svg>
+                        2%
+                    </p>
+                </mat-card-content>
+            </mat-card>
+            <mat-card fxFlex="20">
+                <mat-card-title>Open</mat-card-title>
+                <mat-card-content>
+                    <p id="number">
+                        <br>
+                        14
+                        <br>
+                    </p>
+                    <p id="ticketContent">
+                        <br>
+                        comparison to yesterday
+                        <br>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8%" height="8%" color="green" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                        </svg>
+                        19%
+                    </p>
+                </mat-card-content>
+            </mat-card>
+            <mat-card fxFlex="20">
+                <mat-card-title>In progress</mat-card-title>
+                <mat-card-content>
+                    <p id="number">
+                        <br>
+                        39
+                        <br>
+                    </p>
+                    <p id="ticketContent">
+                        <br>
+                        comparison to yesterday
+                        <br>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8%" height="8%" color="green" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                            <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                        </svg>
+                        11%
+                    </p>
+                </mat-card-content>
+            </mat-card>
+            <mat-card fxFlex="20">
+                <mat-card-title>Done</mat-card-title>
+                <mat-card-content>
+                    <p id="number">
+                        <br>
+                        19
+                        <br>
+                    </p>
+                    <p id="ticketContent">
+                        <br>
+                        comparison to yesterday
+                        <br>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8%" height="8%" color="green" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                            <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                        </svg>
+                        9%
+                    </p>
+                </mat-card-content>
+            </mat-card>
+            <mat-card fxFlex="20">
+                <mat-card-title>Escalated</mat-card-title>
+                <mat-card-content>
+                    <p id="number">
+                        <br>
+                        1
+                        <br>
+                    </p>
+                    <p id="ticketContent">
+                        <br>
+                        comparison to yesterday
+                        <br>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8%" height="8%" color="red" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                        </svg>
+                        100%
+                    </p>
+                </mat-card-content>
+            </mat-card>
+        </mat-card-content>
+
+    </mat-card>
+</div>
+
+<br>
+
+<!--
+    Container, in dem das Kreisdiagram zu der Anzahl und Status der Tickets angezeigt wird.
+    Hier wird die Component "pie" (app\shared\widgets) aufgerufen und die benötigten Informationen werden mitgegeben.
+    Daten "ticketPieData" werden dabei aus dem TicketService geholt.
+-->
+<div id="pieChart" fxLayout="row" fxLayoutAlign ="space-between center" fxLayoutGap="20px" class="stats-cards">
+    <app-widget-pie [data]="ticketPieData" title="Ticket overview"></app-widget-pie>
+</div>
+
+<!--
+    Container, in dem das Liniendiagramm zu der Anzahl der Tickets im Jahr 2021 pro Monat angezeigt wird.
+    Hier wird die Component "area" (app\shared\widgets) aufgerufen und die benötigten Informationen werden mitgegeben.
+    Daten "ticketAreaData" werden dabei aus dem TicketService geholt.
+-->
+<div  id="areaChart">
+    <app-widget-area 
+        [data]="ticketAreaData" 
+        title="Ticket overview" 
+        subtitle="Year 2021" 
+        yAxis="Number of Tickets" 
+        xAxis="Range: January to Dezember"
+        [xAxisCategories]="['January', 'February', 'March', 'April', 'Mai', 'June', 'July', 'August', 'September', 'October', 'November', 'Dezember']"
+        [pointStart]="0">
+    </app-widget-area>
+</div>
+
+
+
+
+
+
