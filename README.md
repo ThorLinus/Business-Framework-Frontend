@@ -34,6 +34,16 @@ The main construct is always the same and differs only in the associated classes
 2. TS receives the data from the connceted service class
 3. If the data is static the service class is the provider of the data but if the service class (e.g. login and dashboard) is connected to the corresponding backend the backend is the provider of the data. In the second case the data is transfered dynamically through the layers to the html file
 
+## Contributors in the frontend
+
+- @MiriamTrautmann
+    - Miriam Trautmann
+- @kaanst00
+    - Kaja Annika Steinbring
+- @ThorLinus
+    - Frederik Schröder
+- Florian Kühner
+
 ## Used configuration
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
