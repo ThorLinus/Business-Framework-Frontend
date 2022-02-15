@@ -1,87 +1,183 @@
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+    <mat-card fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100">
+        <div fxFlex="20">
+            <mat-card style="margin-right:20px">
+                <circle-progress
+                    [percent]="67"
+                    [radius]="100"
+                    [outerStrokeWidth]="16"
+                    [innerStrokeWidth]="8"
+                    [animation]="true"
+                    [animationDuration]="300"
+                ></circle-progress>
 
+                <br>
 
+                <h3 [align]="'center'">Return on sales</h3>  
+            </mat-card>
+        
+        </div>
+        <div fxFlex="20">
+            <mat-card style="margin-right:20px">
+                <circle-progress
+                    [percent]="61"
+                    [radius]="100"
+                    [outerStrokeWidth]="16"
+                    [innerStrokeWidth]="8"
+                    [animation]="true"
+                    [animationDuration]="300"
+                ></circle-progress>
+        
+                <br>
+        
+                <h3 [align]="'center'">Return on equity</h3>
+            </mat-card>
+
+        </div>
+        <div fxFlex="20">
+            <mat-card style="margin-right:20px">
+                <circle-progress
+                    [percent]="25"
+                    [radius]="100"
+                    [outerStrokeWidth]="16"
+                    [innerStrokeWidth]="8"
+                    [animation]="true"
+                    [animationDuration]="300"
+                ></circle-progress>
+        
+                <br>
+        
+                <h3 [align]="'center'">Equity ratio</h3>
+            </mat-card>
+        </div>
+        <div fxFlex="20">
+            <mat-card style="margin-right:20px">
+                <circle-progress
+                    [percent]="12"
+                    [radius]="100"
+                    [outerStrokeWidth]="16"
+                    [innerStrokeWidth]="8"
+                    [animation]="true"
+                    [animationDuration]="300"
+                ></circle-progress>
+                
+                <br>
+        
+                <h3 [align]="'center'">Borrowed capital ratio</h3>
+            </mat-card>
+        </div>
+        <div fxFlex="20">
+            <mat-card>
+                <circle-progress
+                    [percent]="78"
+                    [radius]="100"
+                    [outerStrokeWidth]="16"
+                    [innerStrokeWidth]="8"
+                    [animation]="true"
+                    [animationDuration]="300"
+                ></circle-progress>
+                
+                <br>
+        
+                <h3 [align]="'center'">Profit compared to previous year</h3>
+            </mat-card>
+        </div>
+    </mat-card>
+</div>
 
 <br>
 
 <mat-divider></mat-divider>
 
 <br>
+
 <div fxLayoutGap="20px">
-    <div fxFlex="60">
-        <app-widget-bar 
-            [data]="barData"
-            title="Turnover"
-            subtitle="Source : Cost Center"
-            [xAxis]="['January', 'February', 'March', 'April', 'Mai', 'June', 'July', 'August', 'September', 'October', 'November', 'Dezember']"
-            yAxis="Count">
-        </app-widget-bar>
-    </div>
-    <div fxflex="40">
-
-        <table>
-            <tr>
-                <th>Capital</th>
-                <th>in €</th>
-            </tr>
-            <tr>
-                <td>Equity capital</td>
-                <td>25.000.000</td>
-            </tr>
-            <tr>
-                <td>Total capital</td>
-                <td>28.000.000</td>
-            </tr>
-            <tr>
-                <td>Debt capital</td>
-                <td>3.000.000</td>
-            </tr>
-            <tr>
-                <td>Annual profit</td>
-                <td>3.120.000</td>
-            </tr>
-        </table>
-
-        <br>
-
-        <table>
-            <tr>
-                <th>Profit</th>
-                <th>in €</th>
-            </tr>
-            <tr>
-                <td>Profit</td>
-                <td>18.500.000</td>
-            </tr>
-            <tr>
-                <td>Turnover</td>
-                <td>27.800.000</td>
-            </tr>
-            <tr>
-                <td>Operating costs</td>
-                <td>9.300.000</td>
-            </tr>
-        </table>
-
-        <br>
-
-        <table>
-            <tr>
-                <th>Fixed assets</th>
-                <th>in €</th>
-            </tr>
-            <tr>
-                <td>Properties</td>
-                <td>100.000.000</td>
-            </tr>
-            <tr>
-                <td>Machines</td>
-                <td>32.500.000</td>
-            </tr>
-            <tr>
-                <td>Securities</td>
-                <td>8.000.000</td>
-            </tr>
-        </table>
-    </div>
+        <mat-card fxFlex="60">
+            <div >
+            <app-widget-bar 
+                [data]="barData"
+                title="Turnover"
+                subtitle="Source : Cost Center"
+                [xAxis]="['January', 'February', 'March', 'April', 'Mai', 'June', 'July', 'August', 'September', 'October', 'November', 'Dezember']"
+                yAxis="Count">
+            </app-widget-bar>
+        </div>
+        </mat-card>
+        
+        <mat-card fxflex fxLayout="center"style="margin-left: 50px;">
+            <div>
+                <mat-card >
+                    <table>
+                        <tr>
+                            <th>Capital</th>
+                            <th>in €</th>
+                        </tr>
+                        <tr>
+                            <td>Equity capital</td>
+                            <td>25.000.000</td>
+                        </tr>
+                        <tr>
+                            <td>Total capital</td>
+                            <td>28.000.000</td>
+                        </tr>
+                        <tr>
+                            <td>Debt capital</td>
+                            <td>3.000.000</td>
+                        </tr>
+                        <tr>
+                            <td>Annual profit</td>
+                            <td>3.120.000</td>
+                        </tr>
+                    </table>
+                </mat-card>
+                
+                <br>
+    
+                <mat-card>
+                    <table>
+                        <tr>
+                            <th>Profit</th>
+                            <th>in €</th>
+                        </tr>
+                        <tr>
+                            <td>Profit</td>
+                            <td>18.500.000</td>
+                        </tr>
+                        <tr>
+                            <td>Turnover</td>
+                            <td>27.800.000</td>
+                        </tr>
+                        <tr>
+                            <td>Operating costs</td>
+                            <td>9.300.000</td>
+                        </tr>
+                    </table>    
+                </mat-card>
+    
+                <br>
+    
+                <mat-card>
+                    <table>
+                        <tr>
+                            <th>Fixed assets</th>
+                            <th>in €</th>
+                        </tr>
+                        <tr>
+                            <td>Properties</td>
+                            <td>100.000.000</td>
+                        </tr>
+                        <tr>
+                            <td>Machines</td>
+                            <td>32.500.000</td>
+                        </tr>
+                        <tr>
+                            <td>Securities</td>
+                            <td>8.000.000</td>
+                        </tr>
+                    </table>   
+                </mat-card>
+               
+            </div>
+        </mat-card>
+        
 </div>
-

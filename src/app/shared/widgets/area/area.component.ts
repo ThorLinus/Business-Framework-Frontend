@@ -44,7 +44,7 @@ export class AreaComponent implements OnInit {
           accessibility: {
               rangeDescription: this.xAxis
           },
-          categories:this.xAxisCategories,
+          categories: this.xAxisCategories,
       },
   
       legend: {
