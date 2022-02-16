@@ -3,17 +3,86 @@
     The data is provided by the dashboard.service.ts (/src/app/modules/data).
  -->
 
-<div>
-    <app-widget-area
-        [data]="areaData"
-        title="Employee development per sector"
-        subtitle="Year 2015 - today"
-        yAxis="Number of employees"
-        xAxis="Range: 2015 to 2021"
-        [pointStart]="2015">
-    </app-widget-area>
-</div>
+ <div>
+    <div fxFlex="40">
+        <mat-card>
+            <mat-card-title >
+                Project overview
+            </mat-card-title>
+            <mat-card-content>
 
+                <mat-card fxFlex="33">
+                    <mat-card-title>
+                        open
+                    </mat-card-title>
+                    <mat-card-content>
+                        <mat-card id="inside">
+                            <mat-card-content>
+                                Project social
+                            </mat-card-content>
+                        </mat-card>
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card fxFlex="34">
+                    <mat-card-title>
+                        runs
+                    </mat-card-title>
+                    <mat-card-content>
+                        <mat-card id="inside">
+                            <mat-card-content>
+                                Project intersect
+                            </mat-card-content>
+                        </mat-card>
+
+                        <mat-card id="inside">
+                            <mat-card-content>
+                                Project shipment
+                            </mat-card-content>
+                        </mat-card>
+
+                        <mat-card id="inside">
+                            <mat-card-content>
+                                Project Network
+                            </mat-card-content>
+                        </mat-card>
+
+                        <mat-card id="inside">
+                            <mat-card-content>
+                                Project apple
+                            </mat-card-content>
+                        </mat-card>
+
+                    </mat-card-content>
+                </mat-card>
+
+                <mat-card fxFlex="33">
+                    <mat-card-title>
+                        done
+                    </mat-card-title>
+                    <mat-card-content>
+                        <mat-card id="inside">
+                            <mat-card-content>
+                                Project nature
+                            </mat-card-content>
+                        </mat-card>
+                    </mat-card-content>
+                </mat-card>
+            </mat-card-content>
+        </mat-card>
+    </div>
+ 
+    <div fxFlex="60">
+        <app-widget-area
+            [data]="areaData"
+            title="Employee development per sector"
+            subtitle="Year 2015 - today"
+            yAxis="Number of employees"
+            xAxis="Range: 2015 to 2021"
+            [pointStart]="2015">
+        </app-widget-area>
+    </div>
+</div>
 <br>
 
 <mat-divider></mat-divider>
