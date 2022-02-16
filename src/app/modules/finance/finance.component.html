@@ -96,8 +96,7 @@
 <br>
 
 <div fxLayoutGap="20px">
-        <mat-card fxFlex="60">
-            <div >
+        <div fxFlex="60%">
             <app-widget-bar 
                 [data]="barData"
                 title="Turnover"
@@ -106,31 +105,64 @@
                 yAxis="Count">
             </app-widget-bar>
         </div>
-        </mat-card>
         
-        <mat-card fxflex fxLayout="center"style="margin-left: 50px;">
+    <div fxFlex="40%">        
+        <mat-card>
             <div>
                 <mat-card >
-                    <table>
+                    <table id="table" >
                         <tr>
                             <th>Capital</th>
                             <th>in €</th>
+                            <th></th>
                         </tr>
                         <tr>
                             <td>Equity capital</td>
                             <td>25.000.000</td>
+                            <td>
+                                23%
+                            </td>
+                            <td>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" color="green" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                    <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                </svg>
+                            </td>
                         </tr>
                         <tr>
                             <td>Total capital</td>
                             <td>28.000.000</td>
+                            <td>
+                                13%
+                            </td>
+                            <td>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" color="green" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                    <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                </svg>
+                            </td>
                         </tr>
                         <tr>
                             <td>Debt capital</td>
                             <td>3.000.000</td>
+                            <td>
+                                10%
+                            </td>
+                            <td>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" color="green" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                    <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                </svg>
+                            </td>
                         </tr>
                         <tr>
                             <td>Annual profit</td>
                             <td>3.120.000</td>
+                            <td>
+                                31%
+                            </td>
+                            <td>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" color="red" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                </svg>
+                            </td>
                         </tr>
                     </table>
                 </mat-card>
@@ -138,22 +170,48 @@
                 <br>
     
                 <mat-card>
-                    <table>
+                    <table id="table">
                         <tr>
                             <th>Profit</th>
                             <th>in €</th>
+                            <th></th>
+                            <th></th>
                         </tr>
                         <tr>
                             <td>Profit</td>
                             <td>18.500.000</td>
+                            <td>
+                                11%
+                            </td>
+                            <td>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" color="green" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                    <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                </svg>
+                            </td>
                         </tr>
                         <tr>
                             <td>Turnover</td>
                             <td>27.800.000</td>
+                            <td>
+                                24%
+                            </td>
+                            <td>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" color="green" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                    <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                </svg>
+                            </td>
                         </tr>
                         <tr>
                             <td>Operating costs</td>
                             <td>9.300.000</td>
+                            <td>
+                                13%
+                            </td>
+                            <td>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" color="red" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                </svg>
+                            </td>
                         </tr>
                     </table>    
                 </mat-card>
@@ -161,27 +219,53 @@
                 <br>
     
                 <mat-card>
-                    <table>
+                    <table id="table">
                         <tr>
                             <th>Fixed assets</th>
                             <th>in €</th>
+                            <th></th>
                         </tr>
                         <tr>
                             <td>Properties</td>
                             <td>100.000.000</td>
+                            <td>
+                                3%
+                            </td>
+                            <td>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" color="green" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                    <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                </svg>
+                            </td>
                         </tr>
                         <tr>
                             <td>Machines</td>
                             <td>32.500.000</td>
+                            <td>
+                                13%
+                            </td>
+                            <td>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" color="red" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                </svg>
+                            </td>
                         </tr>
                         <tr>
                             <td>Securities</td>
                             <td>8.000.000</td>
+                            <td>
+                                18%
+                            </td>
+                            <td>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" color="green" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                    <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                </svg>
+                            </td>
                         </tr>
                     </table>   
                 </mat-card>
                
             </div>
         </mat-card>
+    </div>
         
 </div>
