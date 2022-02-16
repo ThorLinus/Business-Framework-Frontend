@@ -62,11 +62,9 @@ export class DashboardComponent implements OnInit {
     this._service.getNewCustomer().subscribe((data)=>{
       this.newCustomerNumber = data.newCostumerNumber;
       this.targetAchievementCustomer = data.targetAchievement;
-      let map = new Map(data.customerIncrease);
-      console.log("Meine Map"+map)
       console.log(data.newCostumerNumber)
       console.log(data.targetAchievement)
-      console.log(data.customerIncrease)
+      console.log("Card Data " +  this.cardData)
     })
     this._service.getTicketAvg().subscribe((data)=>{
       this.ticketTime = data.ticketTime;
