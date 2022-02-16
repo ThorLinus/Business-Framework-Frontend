@@ -4,7 +4,7 @@
  -->
 
  <div>
-    <div fxFlex="40">
+    <div fxFlex="45">
         <mat-card>
             <mat-card-title >
                 Project overview
@@ -24,7 +24,7 @@
                     </mat-card-content>
                 </mat-card>
 
-                <mat-card fxFlex="34">
+                <mat-card fxFlex="34" style="margin-left: 10px">
                     <mat-card-title>
                         runs
                     </mat-card-title>
@@ -56,7 +56,7 @@
                     </mat-card-content>
                 </mat-card>
 
-                <mat-card fxFlex="33">
+                <mat-card fxFlex="33" style="margin-left: 10px">
                     <mat-card-title>
                         done
                     </mat-card-title>
@@ -71,8 +71,13 @@
             </mat-card-content>
         </mat-card>
     </div>
+<<<<<<< HEAD
 
     <div fxFlex="60">
+=======
+ 
+    <div fxFlex="55">
+>>>>>>> 7b00650d5a54d8cc586a6a0f9096a98b340d0fdc
         <app-widget-area
             [data]="areaData"
             title="Employee development per sector"
@@ -100,7 +105,11 @@
         <app-widget-card label="New Tickets" [total]="ticketNewTime" [percentage]="targetAchievementNewTickets" [data]="cardData"></app-widget-card>
     </mat-card>
     <mat-card fxFlex="25">
+<<<<<<< HEAD
         <app-widget-card label="Invoice" [total]="invoiceNumber" [percentage]="targetAchievementInvoice" [data]="cardData"></app-widget-card>
+=======
+            <app-widget-card label="Invoice" [total]="invoiceNumber" [percentage]="targetAchievementInvoice" [data]="invoiceCourse"></app-widget-card>
+>>>>>>> 7b00650d5a54d8cc586a6a0f9096a98b340d0fdc
     </mat-card>
 </div>
 
