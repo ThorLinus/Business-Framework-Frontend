@@ -4,12 +4,15 @@ This project evolved due to an assignment at a university.
 
 Before depolying to the development server the following commands need to be executed:
 
+- `npm install -g @angular/cli`
 - `ng add @angular/material`
 - `npm i highcharts-angular --save`
 - `npm i highcharts --save`
 - `npm i @angular/flex-layout @angular/cdk`
 - `npm install ng-circle-progress --save`
 - `npm install bootstrap`
+
+npm is used with the version: 8.1.2 and Node.js with the version 16.13.1
 
 Highcharts is used to plot serveral charts (e.g. area, bar and pie charts).
 
